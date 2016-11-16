@@ -1,26 +1,29 @@
 package com.example.peter.findme;
 
+import android.view.View;
+
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
-import java.lang.*;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * Created by Peter on 10/29/16.
+ * Created by Peter on 11/16/16.
  */
-public class RegisterRequest extends StringRequest
+public class LoginRequest extends StringRequest
 {
-    private static final String REGISTER_REQUEST_URL = "http://findme.webutu.com/Register.php";
+    private static final String LOGIN_REQUEST_URL = "http://findme.webutu.com/Login.php";
     private Map<String, String> params;
     // constructor of RegisterRequest
-    public RegisterRequest(String name, String username, String email, String password,
+    public LoginRequest (String username, String password,
                            Response.Listener<String> listener)
     {
-        super(Method.POST, REGISTER_REQUEST_URL, listener, null);
+        super(Request.Method.POST, LOGIN_REQUEST_URL, listener, null);
         params = new HashMap<>();
-        params.put("name", name);
         params.put("username", username);
         params.put("password", password);
-        params.put("email", email);
     }
     @Override
     public Map<String, String> getParams()

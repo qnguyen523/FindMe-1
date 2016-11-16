@@ -14,7 +14,21 @@ public class UserAreaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_area);
         // declare variables
         final EditText etUser = (EditText) findViewById(R.id.etUser);
-        /*final EditText etPassword = (EditText) findViewById(R.id.etPassword);*/
+        final EditText etEmail = (EditText) findViewById(R.id.etEmail);
         final TextView welcomeMessage = (TextView) findViewById(R.id.tvWelcomeMsg);
+
+        // get parameter from Intent
+        String name = getIntent().getStringExtra("name");
+        String email = getIntent().getStringExtra("email");
+        String userName  = getIntent().getStringExtra("username");
+
+        // debug
+        System.out.println(userName);
+        System.out.println(email);
+
+        String message = name + " welcome to FindMe";
+        //welcomeMessage.setText(" welcome to FindMe");
+        //etEmail.setText("findme");
+
     }
 }
