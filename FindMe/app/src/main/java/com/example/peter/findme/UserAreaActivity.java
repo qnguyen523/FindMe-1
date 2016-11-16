@@ -26,8 +26,8 @@ public class UserAreaActivity extends AppCompatActivity {
         //System.out.println(userName);
         //System.out.println(email);
 
-        String message = name + " welcome to FindMe";
-        //welcomeMessage.setText(" welcome to FindMe");
+        String message = "Hello "+name + "\nWelcome to FindMe\nEvents and Maps should be from this activity on";
+        welcomeMessage.setText(message);
         //etEmail.setText("findme");
 
     }
