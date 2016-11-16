@@ -23,8 +23,8 @@ public class UserAreaActivity extends AppCompatActivity {
         String userName  = getIntent().getStringExtra("username");
 
         // debug
-        System.out.println(userName);
-        System.out.println(email);
+        //System.out.println(userName);
+        //System.out.println(email);
 
         String message = name + " welcome to FindMe";
         //welcomeMessage.setText(" welcome to FindMe");

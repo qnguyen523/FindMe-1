@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // declare variables
-        final EditText etUser = (EditText) findViewById(R.id.etUser);
+        final EditText etUser = (EditText) findViewById(R.id.etUserName);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
@@ -44,10 +44,16 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //final String userName = etUser.getText().toString();
-                final String userName = "findme";
-                //final String password = etPassword.getText().toString();
-                final String password = "123456";
+                // cannot get username and password
+                final String userName = etUser.getText().toString();
+                //final String userName = "findme";
+
+                final String password = etPassword.getText().toString();
+                //final String password = "123456";
+                //debug
+                System.out.println(userName);
+                System.out.println(password);
+                // done debug
                 Response.Listener<String> responseListener = new Response.Listener<String>()
                 {
                     @Override
