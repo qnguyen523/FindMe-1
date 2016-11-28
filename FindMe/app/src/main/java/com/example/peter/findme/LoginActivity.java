@@ -46,13 +46,10 @@ public class LoginActivity extends AppCompatActivity
             {
                 // cannot get username and password
                 final String userName = etUser.getText().toString();
-                //final String userName = "findme";
-
                 final String password = etPassword.getText().toString();
-                //final String password = "123456";
                 //debug
-                System.out.println(userName);
-                System.out.println(password);
+                /*System.out.println(userName);
+                System.out.println(password);*/
                 // done debug
                 Response.Listener<String> responseListener = new Response.Listener<String>()
                 {
@@ -69,7 +66,7 @@ public class LoginActivity extends AppCompatActivity
                                 String name = jsonResponse.getString("name");
                                 String email = jsonResponse.getString("email");
                                 // connect to RegisterActivity
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity2.class);
                                 intent.putExtra("name", name);
                                 intent.putExtra("username", userName);
                                 intent.putExtra("email", email);
