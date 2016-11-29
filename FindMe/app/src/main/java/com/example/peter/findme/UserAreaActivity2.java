@@ -1,5 +1,6 @@
 package com.example.peter.findme;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,7 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.android.volley.Response;
 
 public class UserAreaActivity2 extends AppCompatActivity {
 
@@ -58,10 +62,28 @@ public class UserAreaActivity2 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                  //      .setAction("Action", null).show();
+                // take care of the navigationDrawer button
+                Intent intent = new Intent(UserAreaActivity2.this, UserAreaActivity3.class);
+                UserAreaActivity2.this.startActivity(intent);
             }
         });
+
+        // take care of the navigationDrawer button
+        //final Button dButton = (Button) findViewById(R.id.dButton);
+
+        /*dButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                //Intent intent = new Intent(UserAreaActivity2.this, UserAreaActivity3.class);
+                //UserAreaActivity2.this.startActivity(intent);
+            }
+        });*/
+
+
 
     }
 
