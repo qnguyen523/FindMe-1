@@ -27,4 +27,10 @@ public class RegisterRequest extends StringRequest
     {
         return this.params;
     }
+    @Override
+    public String toString()
+    {
+        return "In RegisterRequest: "+params.get("name")+"\n"+params.get("username");
+    }
+
 }

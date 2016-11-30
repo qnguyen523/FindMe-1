@@ -29,6 +29,5 @@ public class UserAreaActivity extends AppCompatActivity {
         String message = "Hello "+name + "\nWelcome to FindMe\nEvents and Maps should be from this activity on";
         welcomeMessage.setText(message);
         //etEmail.setText("findme");
-
     }
 }
